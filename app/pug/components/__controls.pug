@@ -1,0 +1,20 @@
+.informer--js.informer.visually-hidden
+	ul.informer-list
+		li.informer-item.attention
+			svg.informer-item__icon(width='24' height='24')
+				use(xlink:href='assets/img/icons.svg#attention')
+			p.informer-item__title You are not protected
+		li.informer-item
+			p.informer-item__title
+				| Your IP Address:&nbsp;
+				span.user-ip--js loading....
+		li.informer-item
+			p.informer-item__title
+				| Your ISP:&nbsp;
+				span.user-provider--js loading....
+		li.informer-item
+			a.informer-item__link(href='#' title='Learn more') Learn More ›
+	button.informer-close--js.close-btn.informer-btn(aria-label='close')
+		span.visually-hidden Close
+
+section.overlay

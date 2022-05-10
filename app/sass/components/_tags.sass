@@ -1,0 +1,28 @@
+.tags
+    margin-top: 25px
+    margin-bottom: 40px
+    text-transform: uppercase
+    &-content
+        @include flex
+        padding: 20px 32px
+        background: hsla(0, 0%, 97%, 1)
+        border-radius: 4px
+    &-title
+        margin-right: 50px
+        font-size: 1.4rem
+        font-weight: 500
+    &-list
+        flex: 1
+    &-item
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 40px
+    &-link
+        font-size: 1.4rem
+        font-weight: 500
+    &-wrap
+        &__link
+            @extend .header-nav__link
+            display: inline-block
+            &:nth-of-type(1)
+                margin-right: 40px

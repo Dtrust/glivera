@@ -1,0 +1,50 @@
+.informer
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    padding: 8px
+    background: hsla(var(--color-second-h),var(--color-second-s),var(--color-second-l),1)
+    z-index: 2
+    &-list
+        @include flex
+        justify-content: center
+    &-item
+        font-size: 1.2rem
+        line-height: 16px
+        color: hsla(212, 8%, 57%, 1)
+        &:not(:last-child)
+            margin-right: 32px
+        &.attention
+            @include flex
+            font-weight: bold
+            color: hsla(33, 100%, 50%, 1)
+        &__link
+            color: hsla(0, 0%, 97%, 1)
+            transition: 265ms ease-in
+            &:hover
+                color: hsla(33, 100%, 50%, 1)
+    &-btn
+        position: absolute
+        right: 32px
+        top: 50%
+        transform: translate(0, -50%)
+        width: 14px
+        height: 14px
+        transition: 265ms ease-in
+        &::before,
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            height: 14px
+            width: 2px
+            background-color: hsla(212, 8%, 57%, 1)
+        &::before
+            transform: rotate(45deg)
+        &::after
+            transform: rotate(-45deg)
+        &:hover
+            &::before,
+            &::after
+                background-color: hsla(33, 100%, 50%, 1)

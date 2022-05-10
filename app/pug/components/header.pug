@@ -1,0 +1,44 @@
+include ../layouts/_mixins
+
+
+header.header--js.header
+	.container.header-content--js.header-content
+		a.logo.header-logo(href='#' title='Company Name')
+			img(src='assets/img/logo.svg' alt='Company Name')
+
+		nav.header-nav
+			+burger
+			ul.header-nav__list
+				li.header-nav__item.nav-level
+					a.header-nav__link(href='#' title='Why us') Why us?
+					ul.nav-level__list
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 1
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 2
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 3
+				li.header-nav__item
+					a.header-nav__link(href='#' title='Why us') Vpn apps
+				li.header-nav__item.nav-level
+					a.header-nav__link(href='#' title='Why us') Support
+					ul.nav-level__list
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 1
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 2
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 3
+				li.header-nav__item.nav-level
+					a.header-nav__link(href='#' title='Why us') Resources
+					ul.nav-level__list
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 1
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 2
+						li.nav-level__item
+							a.header-nav__link.nav-level__link(href='#' title='Why us') Menu 3
+
+		.header-wrap
+			button.btn.btn-transparent.header-btn__login Log in
+			button.btn.btn-solid.header-btn__signup Get started

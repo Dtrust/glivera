@@ -1,0 +1,75 @@
+footer.footer
+	.container.footer-content
+		a.logo.footer-logo(href='#' title='Company Name')
+			img(src='assets/img/logo.svg' alt='Company Name')
+		.footer-wrap
+			.footer-column
+				p.footer-column__title Company
+				ul.footer-column__list
+					-
+						const company = [
+							{link: '#', title: 'About Us'},
+							{link: '#', title: 'Our Team'},
+							{link: '#', title: 'Careers'},
+							{link: '#', title: 'Press'},
+							{link: '#', title: 'In the Media'},
+							{link: '#', title: 'VPN Reviews'},
+							{link: '#', title: 'Companies We Support'},
+							{link: '#', title: 'Contact Us'},
+							{link: '#', title: 'Blog'},
+						]
+					each item in company
+						li.footer-column__item
+							a.footer-column__link(href= item.link title= item.title)= item.title
+
+			.footer-column
+				p.footer-column__title Programs
+				ul.footer-column__list
+					-
+						const programs = [
+							{link: '#', title: 'Whitehat Security'},
+							{link: '#', title: 'Affiliates'},
+						]
+					each item in programs
+						li.footer-column__item
+							a.footer-column__link(href= item.link title= item.title)= item.title
+
+			.footer-column
+				p.footer-column__title Learn more
+				ul.footer-column__list
+					-
+						const learnMore = [
+							{link: '#', title: 'VPN Encryption'},
+							{link: '#', title: 'Android VPN App'},
+							{link: '#', title: 'iOS VPN App'},
+							{link: '#', title: 'PIA Sitemap'},
+						]
+					each item in learnMore
+						li.footer-column__item
+							a.footer-column__link(href= item.link title= item.title)= item.title
+
+			.footer-column
+				p.footer-column__title Legal
+				ul.footer-column__list
+					-
+						const legal = [
+							{link: '#', title: 'Terms Of Service'},
+							{link: '#', title: 'Privacy Policy'},
+							{link: '#', title: 'DMCA Policy'},
+							{link: '#', title: 'Export Control Policy'},
+						]
+					each item in legal
+						li.footer-column__item
+							a.footer-column__link(href= item.link title= item.title)= item.title
+
+			.footer-column.footer-about
+				p.footer-about__title About
+				.footer-about__desc
+					p Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN tunnels which create several layers of privacy and security providing you safety on the internet. Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.
+					p Map data provided by Google.
+					p(style='font-size:12px;margin-bottom:0') PC Mag Editor’s Choice award image reprinted with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
+					p(style='font-size:12px;') PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
+					p(style='font-size:12px;') © London Trust Media, Inc. All Rights Reserved.
+			.footer-column.footer-social
+				p.footer-social__title Social
+				+socialLinks
